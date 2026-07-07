@@ -51,6 +51,44 @@ void pattern12(int n)
 }
 }
 
+void pattern13(int n)
+{
+  for (int i=0;i<n;i++)
+  {
+    for (char ch='A';ch<='A'+i;ch++)
+    {
+       cout<<ch;
+    }
+    cout<<endl;
+  }
+}
+
+void pattern14(int n)
+{
+   for (int i=0;i<n;i++)
+  {
+    for (char ch='A';ch<='A'+n-i-1;ch++)
+    {
+       cout<<ch;
+    }
+    cout<<endl;
+  } 
+}
+
+void pattern15(int n)
+{
+   for (int i=0;i<n;i++)
+  {
+    char ch='A'+i;
+    for (int j=0;j<=i;j++)
+    {
+       cout<<ch;
+    }
+    cout<<endl;
+  }
+  
+}
+
 int main()
 {   int n;
     cout<<"Enter the number:";
@@ -61,4 +99,10 @@ int main()
     pattern11(n);
     cout<<"\nPattern 12\n";
     pattern12(n);
+    cout<<"\nPattern 13\n";
+    pattern13(n);
+    cout<<"\nPattern 14\n";
+    pattern14(n);
+    cout<<"\nPattern 15\n";
+    pattern15(n);
 }
