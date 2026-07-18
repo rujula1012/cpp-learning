@@ -7,7 +7,7 @@ int reverse_num(int n)
     {
         last_digit=n%10;
         n=n/10;
-        if(rev_num>INT_MAX/10||rev_num<INT_MIN/10||(rev_num==INT_MAX&& last_digit<7)||(rev_num==INT_MIN&& last_digit<-8)) 
+        if(rev_num>INT_MAX/10||rev_num<INT_MIN/10||(rev_num==INT_MAX&& last_digit>7)||(rev_num==INT_MIN&& last_digit<-8)) 
         rev_num=rev_num*10+last_digit;
         return 0;
     }
