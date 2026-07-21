@@ -1,21 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool helper(string s, int i)
+bool helper(string s, int l,int r)
 {
+    if(l>=r/2)
+    return true;
 
-    if (i > s.size() / 2)
-        return true;
+    if(!isalnum(s[l]))
+    return helper(s,l+1,r);
 
-    if (s[i] != s[s.size() - i - 1])
-        return false;
+    if(!isalnum(s[r]))
+    return helper(s,l,r-1);
 
-    return helper(s, i + 1);
+    if(tolower(s[l])!=tolower(s[r]))
+    return false;
+
+    return helper(s,l+1,r-1);
 }
 
 bool isPalindrome(string s)
 {
-    helper(s, 0);
+    helper(s, 0,s.size()-1);
 }
 
 int main()
