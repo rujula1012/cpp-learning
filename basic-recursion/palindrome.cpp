@@ -20,7 +20,7 @@ bool helper(string s, int l,int r)
 
 bool isPalindrome(string s)
 {
-    helper(s, 0,s.size()-1);
+    return helper(s, 0,s.size()-1);
 }
 
 int main()
